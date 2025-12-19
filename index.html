@@ -1543,5 +1543,36 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const dropdowns = document.querySelectorAll('.sale-dropdown');
+
+  dropdowns.forEach(dropdown => {
+    const btn = dropdown.querySelector('.sale-toggle-btn');
+    const menu = dropdown.querySelector('.sale-dropdown-menu');
+
+    if (!btn || !menu) return;
+
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+
+      // close other dropdowns first
+      dropdowns.forEach(d => {
+        if (d !== dropdown) d.classList.remove('open');
+      });
+
+      dropdown.classList.toggle('open');
+    });
+  });
+
+  // click outside -> close all
+  document.addEventListener('click', function () {
+    dropdowns.forEach(d => d.classList.remove('open'));
+  });
+});
+</script>
+
 </body>
 </html>
