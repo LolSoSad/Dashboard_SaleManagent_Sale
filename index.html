@@ -715,7 +715,7 @@ button[id$="ApplyBtn"], button[id$="UpdateBtn"], button[id$="ResetBtn"]{
 <span>0</span>
 </div>
 <div class="stat-breakdown-row">
-<span>บัญชีบุคคลธรรมดา</span>
+<span>บัญชีสมาชิก</span>
 <span>100</span>
 </div>
 <div class="stat-breakdown-row">
@@ -783,7 +783,7 @@ button[id$="ApplyBtn"], button[id$="UpdateBtn"], button[id$="ResetBtn"]{
 <!-- Sale table (optional) -->
 <div style="margin-top:1rem;">
 <div style="display:flex; justify-content:space-between; align-items:center; gap:0.75rem; margin-bottom:0.5rem;">
-<div style="font-size:0.95rem; font-weight:600; color:var(--dark-text);">สรุป Sale (ตาราง)</div>
+<div style="font-size:0.95rem; font-weight:600; color:var(--dark-text);">สรุป Top 5 Sale (ตาราง)</div>
 <div id="saleTableRange" style="font-size:0.78rem; color:var(--muted-text);"></div>
 </div>
 <div style="overflow-x:auto;">
@@ -851,6 +851,10 @@ button[id$="ApplyBtn"], button[id$="UpdateBtn"], button[id$="ResetBtn"]{
 <div class="chart-canvas-wrap"><canvas id="forkliftCompareChart"></canvas></div>
 <div id="forkliftCompareFallback" style="margin-top:0.75rem;"></div>
 </div>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center; gap:0.75rem; margin-bottom:0.5rem;">
+<div style="font-size:0.95rem; font-weight:600; color:var(--dark-text);">สรุป Top 5 Sale (ตาราง)</div>
+<div id="saleTableRange" style="font-size:0.78rem; color:var(--muted-text);">ช่วงวันที่: 01/01/2025 - 24/12/2025</div>
 </div>
 <!-- Table -->
 <div style="overflow:auto; border:1px solid #e5edf8; border-radius: 12px;">
@@ -1107,7 +1111,10 @@ button[id$="ApplyBtn"], button[id$="UpdateBtn"], button[id$="ResetBtn"]{
 <div class="content-grid" style="max-width: 1400px; margin: 0 auto; ">
 <!-- Payment schedule -->
 <div class="card">
+<div class="card-header-row">
 <h2 class="card-title">กำหนดการรับชำระค่าเช่า</h2>
+<button class="card-link-btn" type="button">ดูทั้งหมด</button>
+    </div>
 <div class="payment-timeline scroll-list">
 <div class="timeline-item">
 <div class="timeline-dot"></div>
